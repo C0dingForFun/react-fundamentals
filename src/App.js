@@ -22,13 +22,13 @@ const user = {
 }
 
 const products = [
-  {title: 'Cabbage', isFruit:true, id: 1},
+  {title: 'Cabbage',isFruit:true, id: 1},
   {title: 'Garlic',isFruit:false, id: 2},
   {title: 'Apple',isFruit:false, id: 3}
 ]
 
 const listItems = products.map(product =>
-  <li key={product.id} style={{ color: product.isFruit ? 'green' : 'blue'}}>
+  <li key={product.id} style={{ color: product.isFruit ? 'green' : 'blue'}}>+
     {product.title}
   </li>
 );
