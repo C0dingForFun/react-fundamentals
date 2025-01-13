@@ -1,12 +1,18 @@
 import './App.css';
+import {useState} from 'react'
 
-// function MyButton(){
-//   return (
-//     <button>
-//       I'm a button
-//     </button>
-//   )
-// }
+function MyButton(){
+  const [count, setCount] = useState[0]
+  function handleClick(){
+    alert('Hello World')
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Click Me!
+    </button>
+  );
+}
 
 const user = {
   name: 'Gwiba Mabandla',
@@ -26,15 +32,10 @@ const listItems = products.map(product =>
   </li>
 );
 
-
 export default function App() {
   return (
     <>
       <div className="App-header">
-        {/* <div>
-          <h1>Welcome to my app</h1>
-          <MyButton/>
-        </div> */}
         <h1>{user.name}</h1>
       <img
         className="avatar"
@@ -45,6 +46,9 @@ export default function App() {
           height: user.imageSize
         }}
         />
+        <div>
+          <MyButton />
+        </div>
         <h3>Products:</h3>
         <ul>{listItems}</ul>
       </div>
