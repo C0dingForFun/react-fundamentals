@@ -15,13 +15,13 @@ const user = {
 }
 
 const products = [
-  {title: 'Cabbage', id: 1},
-  {title: 'Garlic', id: 2},
-  {title: 'Apple', id: 3}
+  {title: 'Cabbage', isFruit:true, id: 1},
+  {title: 'Garlic',isFruit:false, id: 2},
+  {title: 'Apple',isFruit:false, id: 3}
 ]
 
 const listItems = products.map(product =>
-  <li key={product.id}>
+  <li key={product.id} style={{ color: product.isFruit ? 'green' : 'blue'}}>
     {product.title}
   </li>
 );
