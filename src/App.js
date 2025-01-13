@@ -2,14 +2,15 @@ import './App.css';
 import {useState} from 'react'
 
 function MyButton(){
-  const [count, setCount] = useState[0]
+  const [count, setCount] = useState(0);
+
   function handleClick(){
-    alert('Hello World')
+    setCount(count + 1);
   }
 
   return (
     <button onClick={handleClick}>
-      Click Me!
+      Clicked {count} times
     </button>
   );
 }
@@ -17,7 +18,7 @@ function MyButton(){
 const user = {
   name: 'Gwiba Mabandla',
   imageUrl: ' https://c0dingforfun.github.io/portfolioimg/Images/Me/MyPic.jpg',
-  imageSize: 190,
+  imageSize: 200,
 }
 
 const products = [
@@ -47,6 +48,7 @@ export default function App() {
         }}
         />
         <div>
+          <MyButton />
           <MyButton />
         </div>
         <h3>Products:</h3>
