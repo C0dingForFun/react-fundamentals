@@ -1,20 +1,6 @@
 import './App.css';
 import {useState} from 'react'
 
-function MyButton(){
-  const [count, setCount] = useState(0);
-
-  function handleClick(){
-    setCount(count + 1);
-  }
-
-  return (
-    <button onClick={handleClick}>
-      Clicked {count} times
-    </button>
-  );
-}
-
 const user = {
   name: 'Gwiba Mabandla',
   imageUrl: ' https://c0dingforfun.github.io/portfolioimg/Images/Me/MyPic.jpg',
@@ -34,6 +20,8 @@ const listItems = products.map(product =>
 );
 
 export default function App() {
+  
+
   return (
     <>
       <div className="App-header">
@@ -48,7 +36,7 @@ export default function App() {
         }}
         />
         <div>
-          <MyButton />
+          <MyButton /> 
           <MyButton />
         </div>
         <h3>Products:</h3>
@@ -57,3 +45,17 @@ export default function App() {
     </>
   );
 } 
+
+function MyButton(){
+  const [count, setCount] = useState(0);
+
+  function handleClick(){
+    setCount(count + 1);
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Clicked {count} times
+    </button>
+  );
+}
