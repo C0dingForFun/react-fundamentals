@@ -60,34 +60,3 @@ function MyButton({ count, onClick }) {
     </button>
   );
 }
-
-// export default function App() {
-//   const [count, setCount] = useState(0);
-
-//   function handleClick(){
-//     setCount(count + 1);
-//   }
-
-//   return (
-//     <>
-//       <div>
-//         <h1>{user.name}</h1>
-//       <img
-//         className="avatar"
-//         src={user.imageUrl}
-//         alt={'Photo of ' + user.name}
-//         style={{
-//           width: user.imageSize,
-//           height: user.imageSize
-//         }}
-//         />
-//       <div>
-//         <h1>Counters that update together</h1>
-//         <MyButton count={count} onClick={handleClick} />
-//         <MyButton count={count} onClick={handleClick} />
-//       </div>
-//         <h3>Products:</h3>
-//         <ul>{listItems}</ul>
-//       </div>
-//     </>
-//   );
